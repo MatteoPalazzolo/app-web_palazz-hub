@@ -1,0 +1,84 @@
+/*********** CONTAINER ***********/
+.skills {
+    margin: 0 auto;
+    width: 50%;
+    height: max-content;
+}
+
+/*********** DIV ***********/
+.skill-div {
+    --name-fsize: 2.2em;
+    --level-fsize: 1em;
+    --width: 100%;
+    --icon-size: 10%;
+    --margin: 10px 0 10px 0px;
+    --segment-height: 10px;
+    --title-heigth: 35%;
+
+    --bg-color: #444;
+    --segment-color: #aaa;
+    --text-color: #bbb;
+}
+
+.skill-div {
+    position: relative;
+
+    width: var(--width);
+    margin: var(--margin);
+
+    max-width: 1300px;
+    min-width: 700px;
+
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*********** ICON ***********/
+.skill-icon {
+    width: var(--icon-size);
+    margin: auto 2% auto 1%;
+}
+
+/*********** NAME ***********/
+.skill-name {
+    font-size: var(--name-fsize);
+
+    position: absolute;
+    bottom: var(--title-heigth);
+    left: 17.5%;
+}
+
+/*********** LEVEL ***********/
+.skill-level {
+    position: absolute;
+    bottom: 35%;
+    right: 3%;
+    
+    height: max-content;
+    width: 200px;
+    font-size: var(--level-fsize);
+    text-align: end;
+    font-weight: bold;
+}
+
+/*********** VALUE ***********/
+.skill-valuebar {
+    height: var(--segment-height);
+    
+    position: absolute;
+    bottom: 18%;
+    right: 3%;
+    left: 18%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-valuebar__segment {
+    width: 18%;
+    height: 100%;
+
+    background-color: var(--segment-color);
+    border-radius: 100px;
+}

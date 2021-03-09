@@ -4,40 +4,43 @@
     <title>PalazzHub</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="_Modules/style-main.css"> <!-- main-style -->
-    <link rel="stylesheet" type="text/css" href="_Modules/style-header.css"> <!-- header-style -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="modules/style-main.css"> <!-- main-style -->
     <link rel="stylesheet" type="text/css" href="style-index.css"> <!-- page-style -->
+    <link rel="stylesheet" type="text/css" href="modules/style-header.css"> <!-- header-style -->
+    <link rel="stylesheet" type="text/css" href="modules/style-fixed_image.css"> <!-- fixed_image-style -->
+    <link rel="stylesheet" type="text/css" href="modules/style-footer.css"> <!-- footer-style -->
+    <script src="modules/scroll-color.js"></script> <!-- scroll-script -->
+
+    <!-- CAROUSEL -->
+    <link rel="stylesheet" type="text/css" href="modules/carousel/style-carousel.css">
+    <script src="modules/carousel/resize-img.js"></script>
+    <script src="modules/carousel/carousel.js"></script>
+
+    <!-- SKLL-BAR -->
+    <link rel="stylesheet" href="modules/skill-bar/style-skillbar.css">
+    <link rel="stylesheet" href="modules/skill-bar/style-skillbar_colors.css">
+    <script src="modules/skill-bar/set-skill-level.js"></script>
+   
 </head>
-<body>
+<body class="scroll-color1">
     
     <!-- HEADER -->
-    <header class="header clearfix">
+    <header class="header clearfix scroll-color2">
         <a class="header__logo" href="#"><b>Palazz<span>Hub</span></b></a>
-        <button class="header__icon-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="header__menu animate">
-            <li class="header__menu__item"><a href="_Internal/_Gallery/gallery.html">Art Gallery</a></li>
-            <li class="header__menu__item"><a href="_Internal/_WebDesign/web-design.html">Web Design</a></li>
-            <li class="header__menu__item"><a href="_Internal/_AboutMe/about-me.html">Games</a></li>
-            <li class="header__menu__item contact"><a target="blank" href="https://www.instagram.com/palazz_art/?hl=it">Contact</a></li>
-        </ul>
     </header>
     
-
-    <div class="space"></div>
-
-    <section class="welcome">
-        <div class="welcome__div">
-            <h1 class="welcome__div__text">Welcome in PalazzHub</h1>
-            <h1 class="welcome__div__text">( WORK IN PROGRESS... )</h1>
+    <!-- IMAGE 1 -->
+    <div class="fixed-image image1">
+        <div class="fixed-image__div">
+            <h1 class="fixed-image__div__text">Welcome in PalazzHub</h1>
         </div>
-    </section>
-    <!-- PAGE -->
+    </div>
+    
+    <!-- DESCRIPTION -->
     <div class="page">
         <div id="about-me" class="paragraph color">        
             <h1>About Me</h1>
@@ -55,6 +58,11 @@
             </ol>
         </div>
     </div>
+
+    <!-- IMAGE 2 -->
+    <div class="fixed-image image2"></div>
+    
+    <!-- SKILLS -->
     <div class="page">
         <div id="skills" class="paragraph color">
             <h1>My skills</h1>
@@ -105,27 +113,273 @@
             </ol>
         </div>
     </div>
-    <div class="footer color">
-        <h1>My works</h1>
-        <ul class="footer__works-list">
-            <li class="footer__works-list__item"><a href="_Internal/_Gallery/gallery.html">Art Gallery</a></li>
-            <li class="footer__works-list__item"><a href="_Internal/_WebDesign/web-design.html">Web Design</a></li>
-            <li class="footer__works-list__item"><a href="_Internal/_AboutMe/about-me.html">Games</a></li>
-        </ul>
+
+    <div class="skills">
+        <div class="title"><h1>Skills</h1></div>
+
+        <div class="skill-div sd_level1 sd_color1" data-value="3">
+            <img class="skill-icon" src="images/skill-icons/icon-unity.png" alt="blender_icon">
+            <div class="skill-name"><p>Unity & C#</p></div>
+            <div class="skill-level"><p>js</p></div>
+            
+            <div class="skill-valuebar">
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+            </div>
+        </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="1">
+                <img class="skill-icon" src="images/skill-icons/icon-shaders.png" alt="unity_icon">
+                <p class="skill-name">Shaders Developing</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="2">
+                <img class="skill-icon" src="images/skill-icons/icon-terrain.png" alt="unity_icon">
+                <p class="skill-name">Procedural Generation</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="2">
+                <img class="skill-icon" src="images/skill-icons/icon-game-ai.png" alt="unity_icon">
+                <p class="skill-name">Game AI</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_disable" data-value="0">
+                <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
+                <p class="skill-name">Artificial Intelligence</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_disable" data-value="0">
+                <img class="skill-icon" src="images/skill-icons/icon-networking.png" alt="unity_icon">
+                <p class="skill-name">Networking</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_disable" data-value="0">
+                <img class="skill-icon" src="images/skill-icons/icon-vfx.png" alt="unity_icon">
+                <p class="skill-name">VFX</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="1">
+                <img class="skill-icon" src="images/skill-icons/icon-design.png" alt="unity_icon">
+                <p class="skill-name">Level Design</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+           
+        <div class="skill-div sd_level1 sd_color1" data-value="2">
+            <img class="skill-icon" src="images/skill-icons/icon-html.png" alt="blender_icon">
+            <div class="skill-name"><p>Web Developing</p></div>
+            <div class="skill-level"><p>js</p></div>
+            
+            <div class="skill-valuebar">
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+            </div>
+        </div>
+
+        <div class="skill-div sd_level1 sd_color1" data-value="1">
+            <img class="skill-icon" src="images/skill-icons/icon-android.png" alt="blender_icon">
+            <div class="skill-name"><p>Android Studio & Java</p></div>
+            <div class="skill-level"><p>js</p></div>
+            
+            <div class="skill-valuebar">
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+            </div>
+        </div>
+
+        <div class="skill-div sd_level1 sd_color1" data-value="3">
+            <img class="skill-icon" src="images/skill-icons/icon-python.png" alt="blender_icon">
+            <div class="skill-name"><p>Python</p></div>
+            <div class="skill-level"><p>js</p></div>
+            
+            <div class="skill-valuebar">
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+            </div>
+        </div>
+
+            <div class="skill-div sd_level2 sd_disable" data-value="0">
+                <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
+                <p class="skill-name">Artificial Intelligence</p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+    
+        <div class="skill-div sd_level1 sd_color1" data-value="3">
+            <img class="skill-icon" src="images/skill-icons/icon-blender.png" alt="blender_icon">
+            <div class="skill-name"><p>Blender</p></div>
+            <div class="skill-level"><p>js</p></div>
+            
+            <div class="skill-valuebar">
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+                <div class="skill-valuebar__segment"></div>
+            </div>
+        </div>
+            <div class="skill-div sd_level2 sd_color2" data-value="3">
+                <img class="skill-icon" src="images/skill-icons/icon-modelling.png" alt="unity_icon">
+                <p class="skill-name"> Modelling </p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="2">
+                <img class="skill-icon" src="images/skill-icons/icon-sculpting.png" alt="unity_icon">
+                <p class="skill-name"> Sculpting </p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
+
+            <div class="skill-div sd_level2 sd_color2" data-value="1">
+                <img class="skill-icon" src="images/skill-icons/icon-animation.png" alt="unity_icon">
+                <p class="skill-name"> 3D Animation </p>
+                <p class="skill-level"></p>
+                <div class="skill-valuebar">
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                    <div class="skill-valuebar__segment"></div>
+                </div>
+            </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
+            
 
-            $(".header__icon-bar").click(function(e){
 
-                $(".header__menu").toggleClass("is-open");
-                e.preventDefault();
+    <!-- IMAGE 3 -->
+    <div class="fixed-image image3"></div>
+    
+    <div class="separator1"></div>
+    
+    <!-- GALLERY -->
+    <div class="title"><h1>Gallery</h1></div>
 
-            });
-        });
-    </script>
+    <div class="carousel">
+        <div class="crs_button crs_next"><img src="modules/carousel/btn/icon-right_arrow.png" alt="right_arrow"></div>
+        <div class="crs_button crs_prev"><img src="modules/carousel/btn/icon-left_arrow.png" alt="left_arrow"></div>
+        <div class="carousel-body scroll-color2">    
+            <div class="carousel-slider slide-transition">
+                <img class="crs_image" src="images/gallery/1.png" alt="img_1">
+                <img class="crs_image" src="images/gallery/2.png" alt="img_2">
+                <img class="crs_image" src="images/gallery/3.png" alt="img_3">
+                <img class="crs_image" src="images/gallery/4.png" alt="img_4">
+                <img class="crs_image" src="images/gallery/1.png" alt="img_1">
+            </div>
+        </div>
+    </div>
+    </dciv>
+
+    <div class="separator1"></div>
+
+    <!-- IMAGE 4 -->
+    <div class="fixed-image image4"></div>
+
+    <div class="separator2"></div>
+
+    <!-- IMAGE 5 -->
+    <div class="fixed-image image5"></div>
+    
+    <div class="separator2"></div>
+
+    <!-- IMAGE 6 -->
+    <div class="fixed-image image6"></div>
+
+    <!-- FOOTER -->
+    <div class="footer scroll-color1">
+        <a href="mailto:palamatteocp2004@gmail.com" class="footer_icon"><img src="images/social/icon-mail.png" alt="mail_icon"></a>
+        <a target="blank" href="https://matteopalazz.itch.io/" class="footer_icon"><img src="images/social/icon-itchio.png" alt="itch-io_icon"></a>
+        <a target="blank" href="https://www.pinterest.it/MatteoPalazz/_saved/" class="footer_icon small"><img src="images/social/icon-pinterest.png" alt="pinterest_icon"></a>
+        <a target="blank" href="https://www.instagram.com/palazz_art/?hl=it" class="footer_icon"><img src="images/social/icon-instagram.png" alt="instagram_icon"></a>
+        <a target="blank" href="https://github.com/MatteoPalazzolo" class="footer_icon"><img src="images/social/icon-github.png" alt="github_icon"></a>
+    </div>
 
 </body>
 </html>

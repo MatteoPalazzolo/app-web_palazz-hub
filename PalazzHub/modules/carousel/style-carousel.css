@@ -1,0 +1,90 @@
+:root {
+    --btn_color: #ddd;
+    --btn_hover: #bbb;
+    --btn_disable: #999;
+}
+/*
+html, body {overflow-x: hidden;}
+*/
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    
+    width: 700px;
+    height: 400px;
+}
+
+.carousel-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    background-color: #999;
+}
+
+.carousel-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100px;
+    height: 95%;
+    left: 0px;
+
+    display: flex;
+}
+
+.slide-transition {transition: left .6s;}
+
+.carousel-slider img {
+    height: 100%;
+}
+
+/*********** BTN ***********/
+.crs_button {
+    position: relative;
+    width: 60px;
+    height: 90px;
+
+    background-color: var(--btn_color);
+    border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.crs_button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 75%;
+}
+
+.crs_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12%;
+}
+
+.crs_prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12%;
+}
+
+.crs_button:hover {
+    background-color: var(--btn_hover);
+}
+
+.crs_button-disable {
+    cursor: not-allowed;
+    background-color: var(--btn_disable);
+}

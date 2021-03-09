@@ -1,147 +1,47 @@
-/*html, body {height: 100%;}*/
-body {
-    background-color: #325680;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --title-color: #fff;
 }
 
-.space {
-    height: 80px;
-    background-color: #52e0fa;
+/******************* Separator *******************/
+.separator1 {
+    width: 100%;
+    height: 200px;
 }
 
-.page {
-    margin: auto;
-    width: 85%;
-
-    display: flex;
-    flex-wrap: wrap;
+.separator2 {
+    width: 100%;
+    height: 600px;
 }
 
-.left {
-    margin-left: 0;
+/******************* Titles *******************/
+.title {
+    margin: 25px auto;
 }
 
-.right {
-    margin-right: 0;
-}
+.title h1 {
+    margin: 0 auto;
 
-/***************** INGUARDABILE ***************/
-/**********************************************/
-.color {
-    background-color: #97d4f8;
-}
-
-.color:hover {
-    background-color: #a6deff;
-}
-
-.paragraph
-{
-    padding: 20px 50px;
-    width: 48.2%;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-.paragraph h1 {
-    font-size: 40px;
+    font-weight: lighter;
+    color: var(--title-color);
+    font-family: 'Rubik', sans-serif;
+    text-decoration: underline 4px;
+    font-size: 3.5em;
     text-align: center;
 }
 
-.paragraph h2 {
-    font-size: 26px;
-}
 
-.paragraph ol {
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
+/******************* Descriptions *******************/
 
-.paragraph ol li {
-    display: block;
-    font-size: 25px;
-}
 
-.paragraph ul {
-    margin-left: 30px;
-}
-
-.paragraph ul li {
-    display:list-item;
-    font-size: 22px;
-}
-
-/******************* Footer *******************/
-.footer {
-    padding: 10px;
-    width: 500px;
-    margin: 10px auto;
-    border-radius: 10px;
-
-    width: 85%;
-    margin-bottom: 50px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.footer__works-list__item {
-    display: inline-block;
-}
-
-.footer__works-list__item a {
-    display: block;
-    padding: 4px 20px;
-    margin: 10px 5px;
-
-    font-size: 22px;
-    text-align: center;
-    background-color: #fff;
-    color:#000;
-    border: solid #000 2px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.footer__works-list__item a:hover {
-    background-color: #52e0fa;
-}
  
 /******************* Animate *******************/
 .animate {
     transition: all .1s;
 }
 
-/******************* Background Image *******************/
-.welcome {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url("background-images/bg_3.1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.welcome__div {
-    max-width: 1000px;
-    text-align: center;
-}
-
-.welcome__div__text {
-    padding: 50px;
-    margin-top: -100px;
-    font-size: 4em;
-    color: #fff;
-}
 
 @media screen and (max-width: 899px) {
     .footer__works-list__item {display: block; width: 200px; margin: auto;}
