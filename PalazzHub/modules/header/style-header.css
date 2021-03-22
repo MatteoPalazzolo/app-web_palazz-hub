@@ -1,0 +1,79 @@
+/********** Normalize **********/
+* {margin: 0; padding: 0;}
+body, html {height: 100%;}
+
+
+/********** General **********/
+.animate-header {
+    -webkit-transition: all 0.3s ease-out;
+    transition: height 0.3s ease-out;
+}
+
+.header {background-color: #000; /*padding: 5px 10px;*/ position: fixed;  width: 100%; z-index: 5;}
+
+.header__menu {float: right;  overflow: hidden; margin: 10px;}
+
+.header__menu__item {display: inline-block;}
+
+.header__logo {margin: 10px; float: left;}
+
+.header__logo, .header__logo * {
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+.header__logo span {color: #52e0fa;}
+
+.header__menu__item a {
+    display: block;
+    padding: 4px 20px;
+    margin: 10px 5px;
+
+    font-size: 22px;
+    text-align: center;
+    color:#fff;
+    border: solid #fff 2px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.header__menu__item a:hover {background-color: #52e0fa;}
+
+.contact a {border: solid #52e0fa 2px;}
+
+.contact a:hover {border: solid #fff 2px;}
+
+.header__icon-bar {
+    display: block;
+    float: right;
+    padding: 20px;
+    display: none;
+    background-color: #0000;
+    border: unset;
+}
+
+.header__icon-bar:focus {outline: none;}
+
+.header__icon-bar span {display: block; height: 3px; width: 30px; background-color: #fff; margin-bottom: 5px;}
+
+
+/********** Smartphone **********/
+@media screen and (max-width: 1149px) {
+    .header {padding: 10px;}
+    .header__icon-bar {display: block; padding: 15px;}
+    .header__menu {width: 100%; height: 0; overflow: hidden; border-top: solid #fff 3px; border-radius: 5px; margin: 0;}
+    .header__menu__item {display: block;}
+    .header__menu__item a {padding: 3px; font-size: 20px;}
+    .header__logo, .header__logo * {font-size: 40px; margin: 0;}
+    .is-open {height: 274px; border-top: unset;}
+}
+
+/********** Clearfix **********/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

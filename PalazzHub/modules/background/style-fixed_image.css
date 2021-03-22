@@ -1,0 +1,61 @@
+/******************* Background Image *******************/
+.fixed-image {
+    height: 80vh;
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position-y: 100px;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-image__div {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.fixed-image__div__text {
+    padding: 50px;
+    margin-top: -100px;
+    font-size: 4em;
+    color: #fff;
+}
+
+#image1 {
+    background-image: url("../../images/background/bg_1.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+}
+
+#image2 {
+    background-image: url("../../images/background/bg_2.jpg");
+    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);
+}
+
+#image3 {
+    background-image: url("../../images/background/bg_3.jpg");
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+}
+
+#image4 {
+    background-image: url("../../images/background/bg_4.jpg");
+    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);
+}
+
+#image5 {
+    background-image: url("../../images/background/bg_5.jpg");
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+}
+
+#image6 {
+    background-image: url("../../images/background/bg_6.1.jpg");
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+}
+
+@media screen and (max-width: 899px) {
+    .fixed-image__div__text {font-size: 3em; margin-top: 0;}
+}

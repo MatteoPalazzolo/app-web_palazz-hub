@@ -6,371 +6,379 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
+    <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 
+    <!-- LIBRARIES -->
+    <script src="modules/js-libraries/mathf.js"></script>
+
+    <!-- GENERAL -->
     <link rel="stylesheet" type="text/css" href="modules/style-main.css"> <!-- main-style -->
     <link rel="stylesheet" type="text/css" href="style-index.css"> <!-- page-style -->
-    <link rel="stylesheet" type="text/css" href="modules/style-header.css"> <!-- header-style -->
-    <link rel="stylesheet" type="text/css" href="modules/style-fixed_image.css"> <!-- fixed_image-style -->
-    <link rel="stylesheet" type="text/css" href="modules/style-footer.css"> <!-- footer-style -->
-    <script src="modules/scroll-color.js"></script> <!-- scroll-script -->
+
+    <!-- HEADER -->
+    <link rel="stylesheet" type="text/css" href="modules/header/style-header.css">
+    <script src="modules/header/header.js"></script>
+
+    <!-- SKLL-BAR -->
+    <link rel="stylesheet" href="modules/skill-bar/style-skillbar.css">
+    <link rel="stylesheet" href="modules/skill-bar/style-skillbar_colors.css">
+    <script src="modules/skill-bar/set-skill-level.js"></script>
 
     <!-- CAROUSEL -->
     <link rel="stylesheet" type="text/css" href="modules/carousel/style-carousel.css">
     <script src="modules/carousel/resize-img.js"></script>
     <script src="modules/carousel/carousel.js"></script>
 
-    <!-- SKLL-BAR -->
-    <link rel="stylesheet" href="modules/skill-bar/style-skillbar.css">
-    <link rel="stylesheet" href="modules/skill-bar/style-skillbar_colors.css">
-    <script src="modules/skill-bar/set-skill-level.js"></script>
+    <!-- FOOTER -->
+    <link rel="stylesheet" type="text/css" href="modules/footer/style-footer.css">
    
+    <!-- BACKGROUND -->
+    <link rel="stylesheet" type="text/css" href="modules/background/style-fixed_image.css">
+    <script src="modules/background/scroll-color.js"></script>
+
 </head>
 <body class="scroll-color1">
-    
+
     <!-- HEADER -->
     <header class="header clearfix scroll-color2">
         <a class="header__logo" href="#"><b>Palazz<span>Hub</span></b></a>
+        <button onclick="ShowMenu();" class="header__icon-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="header__menu animate-header">
+            <li class="header__menu__item"><a href="#">About Me</a></li>
+            <li class="header__menu__item"><a href="#image2">Skills</a></li>
+            <li class="header__menu__item"><a href="#image3">Gallery</a></li>
+            <li class="header__menu__item"><a href="#image4">Projects</a></li>
+            <li class="header__menu__item"><a href="#image5">Sites</a></li>
+            <li class="header__menu__item contact"><a href="#image6">Contacts</a></li>
+        </ul>
     </header>
     
     <!-- IMAGE 1 -->
-    <div class="fixed-image image1">
+    <div id="image1" class="fixed-image background-color" data-color="#2D4473">
         <div class="fixed-image__div">
             <h1 class="fixed-image__div__text">Welcome in PalazzHub</h1>
         </div>
     </div>
     
-    <!-- DESCRIPTION -->
-    <div class="page">
-        <div id="about-me" class="paragraph color">        
-            <h1>About Me</h1>
-            <ol>
-                <li>Nome: Matteo Palazzolo</li>
-                <li>Età: 16 anni</li>
-                <li>Studente, 3° Liceo Scientifico</li>
-            </ol>
+    <section id="description">
+        <div class="page">
+            <div id="about-me" class="paragraph color">        
+                <h1>About Me</h1>
+                <ol>
+                    <li>Nome: Matteo Palazzolo</li>
+                    <li>Età: 16 anni</li>
+                    <li>Studente, 3° Liceo Scientifico</li>
+                </ol>
+            </div>
+            <div id="future" class="paragraph color">
+                <h1>I want to become</h1>
+                <ol>
+                    <li>Game Engineer</li>
+                    <li>Game Developer</li>
+                </ol>
+            </div>
         </div>
-        <div id="future" class="paragraph color">
-            <h1>I want to become</h1>
-            <ol>
-                <li>Game Engineer</li>
-                <li>Game Developer</li>
-            </ol>
-        </div>
-    </div>
-
+    </section>
+    
     <!-- IMAGE 2 -->
-    <div class="fixed-image image2"></div>
-    
+    <div id="image2" class="fixed-image background-color" data-color="#F079F2"></div>
+
     <!-- SKILLS -->
-    <div class="page">
-        <div id="skills" class="paragraph color">
-            <h1>My skills</h1>
+    <section id="skills">
+        
+        <div class="skills">
+            <div class="title"><h1>Skills</h1></div>
 
-            <h2>Programming</h2>
-            <ol>
-                <li>Unity (Game Engine) => C#</li>
-                <li>
-                    <ul>
-                        <li>Shaders developing (basics)</li>
-                        <li>Procedural generation (basics)</li>
-                        <li>Game AI (basics)</li>
-                    </ul>
-                </li>
-                <li>Web developing => Html, Css, Javascript</li>
-                <li>Android Studio (basics) => Java, Xml</li>
-                <li>Python</li>
-            </ol>
+            <section id="programming">
 
-            <h2>Graphic</h2>
-            <ol>
-                <li>3D Artist in (Blender)</li>
-                <li>
-                    <ul>
-                        <li>Character Design (basics)</li>
-                        <li>Enviroment Design (basics)</li>
-                    </ul>
-                </li>
-            </ol>
+                <section id="unity">
 
-        </div>
-        <div id="learn" class="paragraph color">
-            <h1>I want / I'm going to learn</h1>
-            
-            <h2>Programming</h2>
-            <ol>
-                <li>Bot developing (Discord)</li>
-                <li>Unreal Engine (Game Engine)</li>
-                <li>Artificial intelligence</li>
-                <li>Cybersecurity</li>
-                <li>Networking</li>
-            </ol>
+                    <!-- Unity & C# -->
+                    <div class="skill-div sd_level1 sd_color1" data-value="3">
+                        <img class="skill-icon" src="images/skill-icons/icon-unity.png" alt="blender_icon">
+                        <div class="skill-name"><p>Unity & C#</p></div>
+                        <div class="skill-level"><p>js</p></div>
+                        
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
 
-            <h2>Graphic</h2>
-            <ol>
-                <li>Game VFX</li>
-                <li>3D Animation</li>
-            </ol>
-        </div>
-    </div>
+                    <!-- Shaders Developing -->
+                    <div class="skill-div sd_level2 sd_color2" data-value="1">
+                        <img class="skill-icon" src="images/skill-icons/icon-shaders.png" alt="unity_icon">
+                        <p class="skill-name">Shaders Developing</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
 
-    <div class="skills">
-        <div class="title"><h1>Skills</h1></div>
+                    <!-- Procedural Generation -->
+                    <div class="skill-div sd_level2 sd_color2" data-value="2">
+                        <img class="skill-icon" src="images/skill-icons/icon-terrain.png" alt="unity_icon">
+                        <p class="skill-name">Procedural Generation</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
 
-        <div class="skill-div sd_level1 sd_color1" data-value="3">
-            <img class="skill-icon" src="images/skill-icons/icon-unity.png" alt="blender_icon">
-            <div class="skill-name"><p>Unity & C#</p></div>
-            <div class="skill-level"><p>js</p></div>
-            
-            <div class="skill-valuebar">
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-            </div>
-        </div>
+                    <!-- Game AI -->
+                    <div class="skill-div sd_level2 sd_color2" data-value="2">
+                        <img class="skill-icon" src="images/skill-icons/icon-game-ai.png" alt="unity_icon">
+                        <p class="skill-name">Enemy AI</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
 
-            <div class="skill-div sd_level2 sd_color2" data-value="1">
-                <img class="skill-icon" src="images/skill-icons/icon-shaders.png" alt="unity_icon">
-                <p class="skill-name">Shaders Developing</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_color2" data-value="2">
-                <img class="skill-icon" src="images/skill-icons/icon-terrain.png" alt="unity_icon">
-                <p class="skill-name">Procedural Generation</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_color2" data-value="2">
-                <img class="skill-icon" src="images/skill-icons/icon-game-ai.png" alt="unity_icon">
-                <p class="skill-name">Game AI</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_disable" data-value="0">
-                <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
-                <p class="skill-name">Artificial Intelligence</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_disable" data-value="0">
-                <img class="skill-icon" src="images/skill-icons/icon-networking.png" alt="unity_icon">
-                <p class="skill-name">Networking</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_disable" data-value="0">
-                <img class="skill-icon" src="images/skill-icons/icon-vfx.png" alt="unity_icon">
-                <p class="skill-name">VFX</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_color2" data-value="1">
-                <img class="skill-icon" src="images/skill-icons/icon-design.png" alt="unity_icon">
-                <p class="skill-name">Level Design</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-           
-        <div class="skill-div sd_level1 sd_color1" data-value="2">
-            <img class="skill-icon" src="images/skill-icons/icon-html.png" alt="blender_icon">
-            <div class="skill-name"><p>Web Developing</p></div>
-            <div class="skill-level"><p>js</p></div>
-            
-            <div class="skill-valuebar">
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-            </div>
-        </div>
-
-        <div class="skill-div sd_level1 sd_color1" data-value="1">
-            <img class="skill-icon" src="images/skill-icons/icon-android.png" alt="blender_icon">
-            <div class="skill-name"><p>Android Studio & Java</p></div>
-            <div class="skill-level"><p>js</p></div>
-            
-            <div class="skill-valuebar">
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-            </div>
-        </div>
-
-        <div class="skill-div sd_level1 sd_color1" data-value="3">
-            <img class="skill-icon" src="images/skill-icons/icon-python.png" alt="blender_icon">
-            <div class="skill-name"><p>Python</p></div>
-            <div class="skill-level"><p>js</p></div>
-            
-            <div class="skill-valuebar">
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-            </div>
-        </div>
-
-            <div class="skill-div sd_level2 sd_disable" data-value="0">
-                <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
-                <p class="skill-name">Artificial Intelligence</p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
+                    <!-- Artificial Intelligence -->
+                    <div class="skill-div sd_level2 sd_disable" data-value="0">
+                        <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
+                        <p class="skill-name">Artificial Intelligence</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
     
-        <div class="skill-div sd_level1 sd_color1" data-value="3">
-            <img class="skill-icon" src="images/skill-icons/icon-blender.png" alt="blender_icon">
-            <div class="skill-name"><p>Blender</p></div>
-            <div class="skill-level"><p>js</p></div>
-            
-            <div class="skill-valuebar">
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-                <div class="skill-valuebar__segment"></div>
-            </div>
+                    <!-- Networking -->
+                    <div class="skill-div sd_level2 sd_disable" data-value="0">
+                        <img class="skill-icon" src="images/skill-icons/icon-networking.png" alt="unity_icon">
+                        <p class="skill-name">Networking</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
+    
+                </section>
+    
+                <section id="web">
+                    <div class="skill-div sd_level1 sd_color1" data-value="2">
+                        <img class="skill-icon" src="images/skill-icons/icon-html.png" alt="blender_icon">
+                        <div class="skill-name"><p>Web Developing</p></div>
+                        <div class="skill-level"><p>js</p></div>
+                        
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
+                </section>
+                    
+                <section id="andorid">
+                    <div class="skill-div sd_level1 sd_color1" data-value="1">
+                        <img class="skill-icon" src="images/skill-icons/icon-android.png" alt="blender_icon">
+                        <div class="skill-name"><p>Android Studio & Java</p></div>
+                        <div class="skill-level"><p>js</p></div>
+                        
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
+                </section>
+                    
+                <section id="python">
+                    <div class="skill-div sd_level1 sd_color1" data-value="3">
+                        <img class="skill-icon" src="images/skill-icons/icon-python.png" alt="blender_icon">
+                        <div class="skill-name"><p>Python</p></div>
+                        <div class="skill-level"><p>js</p></div>
+                        
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill-div sd_level2 sd_disable" data-value="0">
+                        <img class="skill-icon" src="images/skill-icons/icon-ai.png" alt="unity_icon">
+                        <p class="skill-name">Artificial Intelligence</p>
+                        <p class="skill-level"></p>
+                        <div class="skill-valuebar">
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                            <div class="skill-valuebar__segment"></div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+                      
+            <section id="design">
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level1 sd_color1" data-value="3">
+                    <img class="skill-icon" src="images/skill-icons/icon-blender.png" alt="blender_icon">
+                    <div class="skill-name"><p>Blender</p></div>
+                    <div class="skill-level"><p>js</p></div>
+                    
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level2 sd_color2" data-value="3">
+                    <img class="skill-icon" src="images/skill-icons/icon-modelling.png" alt="unity_icon">
+                    <p class="skill-name"> Modelling </p>
+                    <p class="skill-level"></p>
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level2 sd_color2" data-value="2">
+                    <img class="skill-icon" src="images/skill-icons/icon-sculpting.png" alt="unity_icon">
+                    <p class="skill-name"> Sculpting </p>
+                    <p class="skill-level"></p>
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level2 sd_color2" data-value="1">
+                    <img class="skill-icon" src="images/skill-icons/icon-animation.png" alt="unity_icon">
+                    <p class="skill-name"> 3D Animation </p>
+                    <p class="skill-level"></p>
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level2 sd_disable" data-value="0">
+                    <img class="skill-icon" src="images/skill-icons/icon-vfx.png" alt="unity_icon">
+                    <p class="skill-name">VFX</p>
+                    <p class="skill-level"></p>
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+                <!-- Level Design -->
+                <div class="skill-div sd_level2 sd_color2" data-value="1">
+                    <img class="skill-icon" src="images/skill-icons/icon-design.png" alt="unity_icon">
+                    <p class="skill-name">Level Design</p>
+                    <p class="skill-level"></p>
+                    <div class="skill-valuebar">
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                        <div class="skill-valuebar__segment"></div>
+                    </div>
+                </div>
+
+            </section>
+        
         </div>
-            <div class="skill-div sd_level2 sd_color2" data-value="3">
-                <img class="skill-icon" src="images/skill-icons/icon-modelling.png" alt="unity_icon">
-                <p class="skill-name"> Modelling </p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_color2" data-value="2">
-                <img class="skill-icon" src="images/skill-icons/icon-sculpting.png" alt="unity_icon">
-                <p class="skill-name"> Sculpting </p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-
-            <div class="skill-div sd_level2 sd_color2" data-value="1">
-                <img class="skill-icon" src="images/skill-icons/icon-animation.png" alt="unity_icon">
-                <p class="skill-name"> 3D Animation </p>
-                <p class="skill-level"></p>
-                <div class="skill-valuebar">
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                    <div class="skill-valuebar__segment"></div>
-                </div>
-            </div>
-    </div>
-
-            
-
-
+    
+    </section>
+    
     <!-- IMAGE 3 -->
-    <div class="fixed-image image3"></div>
+    <div id="image3" class="fixed-image background-color" data-color="#C23E3E"></div>
     
     <div class="separator1"></div>
     
     <!-- GALLERY -->
-    <div class="title"><h1>Gallery</h1></div>
+    <section id="gallery">
+        <div class="title"><h1>Gallery</h1></div>
 
-    <div class="carousel">
-        <div class="crs_button crs_next"><img src="modules/carousel/btn/icon-right_arrow.png" alt="right_arrow"></div>
-        <div class="crs_button crs_prev"><img src="modules/carousel/btn/icon-left_arrow.png" alt="left_arrow"></div>
-        <div class="carousel-body scroll-color2">    
-            <div class="carousel-slider slide-transition">
-                <img class="crs_image" src="images/gallery/1.png" alt="img_1">
-                <img class="crs_image" src="images/gallery/2.png" alt="img_2">
-                <img class="crs_image" src="images/gallery/3.png" alt="img_3">
-                <img class="crs_image" src="images/gallery/4.png" alt="img_4">
-                <img class="crs_image" src="images/gallery/1.png" alt="img_1">
+        <div class="carousel">
+            <div class="crs_button crs_next"><img src="modules/carousel/btn/icon-right_arrow.png" alt="right_arrow"></div>
+            <div class="crs_button crs_prev"><img src="modules/carousel/btn/icon-left_arrow.png" alt="left_arrow"></div>
+            <div class="carousel-body scroll-color2">    
+                <div class="carousel-slider slide-transition">
+                    <img class="crs_image" src="images/gallery/1.png" alt="img_1">
+                    <img class="crs_image" src="images/gallery/2.png" alt="img_2">
+                    <img class="crs_image" src="images/gallery/3.png" alt="img_3">
+                    <img class="crs_image" src="images/gallery/4.png" alt="img_4">
+                    <img class="crs_image" src="images/gallery/1.png" alt="img_1">
+                </div>
             </div>
         </div>
-    </div>
-    </dciv>
-
+    </section>
+    
     <div class="separator1"></div>
 
     <!-- IMAGE 4 -->
-    <div class="fixed-image image4"></div>
+    <div id="image4" class="fixed-image background-color" data-color="#E0B73D"></div>
 
     <div class="separator2"></div>
 
     <!-- IMAGE 5 -->
-    <div class="fixed-image image5"></div>
+    <div id="image5" class="fixed-image background-color" data-color="#A8E63D"></div>
     
     <div class="separator2"></div>
 
     <!-- IMAGE 6 -->
-    <div class="fixed-image image6"></div>
+    <div id="image6" class="fixed-image background-color" data-color="#FFFFFF"></div>
 
     <!-- FOOTER -->
     <div class="footer scroll-color1">

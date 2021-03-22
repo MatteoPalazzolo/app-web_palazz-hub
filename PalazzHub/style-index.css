@@ -15,6 +15,10 @@
     height: 600px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /******************* Titles *******************/
 .title {
     margin: 25px auto;
@@ -30,18 +34,11 @@
     font-size: 3.5em;
     text-align: center;
 }
-
-
-/******************* Descriptions *******************/
-
-
  
 /******************* Animate *******************/
 .animate {
     transition: all .1s;
 }
-
-
 
 @media screen and (max-width: 899px) {
     .footer__works-list__item {display: block; width: 200px; margin: auto;}

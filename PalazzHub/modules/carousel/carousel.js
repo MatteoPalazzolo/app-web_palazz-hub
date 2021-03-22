@@ -1,3 +1,4 @@
+{
 window.addEventListener("load", () => {
     let carousels = document.querySelectorAll(".carousel");
     for (let i = 0; i < carousels.length; i++) {
@@ -60,4 +61,5 @@ function AddLeft(value) {
     }
 
     slider.style.left = left + "px";
+}
 }
