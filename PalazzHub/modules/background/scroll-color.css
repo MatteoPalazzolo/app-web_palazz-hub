@@ -2,7 +2,7 @@
     --scroll-main: #9c9c9c;
     --scroll-light: #ffffff;
     --scroll-dark: #666666;
-    --scroll-complementar: #000;
+    --scroll-complementar: #111;
 }
 
 /******************* Scrollbar *******************/
@@ -51,6 +51,7 @@
     background-color: var(--scroll-dark);
 }
 
+
 /******************* Background Image *******************/
 .fixed-image {
     height: 80vh;
@@ -79,34 +80,9 @@
     color: #fff;
 }
 
-#image1 {
-    background-image: url("../../images/background/bg_1.jpg");
-    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
-}
-
-#image2 {
-    background-image: url("../../images/background/bg_2.jpg");
-    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);
-}
-
-#image3 {
-    background-image: url("../../images/background/bg_3.jpg");
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
-}
-
-#image4 {
-    background-image: url("../../images/background/bg_4.jpg");
-    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);
-}
-
-#image5 {
-    background-image: url("../../images/background/bg_5.jpg");
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
-}
-
-#image6 {
-    background-image: url("../../images/background/bg_6.1.jpg");
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+.fixed-image {
+    background-image: var(--bg-img);
+    clip-path: var(--path);
 }
 
 @media screen and (max-width: 899px) {
