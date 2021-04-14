@@ -1,43 +1,33 @@
 {
 /********** REFERENCES **********/
-let items1, items2;
 let imageList = [];
+
+let scrollMain, scrollLight, scrollDark, scrollComplementar;
+let root;
+
+const colorFact = .3;
+const lerpFact = 500;
 
 /********** START **********/
 window.addEventListener("resize", () => {
-    imageList = BuildColorList();
+    BuildColorList();
 });
 
 window.addEventListener("scroll", () => {
-    console.log(window.scrollY);
+    //console.log(window.scrollY);
 }); 
 
 window.addEventListener("load", () => {
-    items1 = document.querySelectorAll(".scroll-color1");
-    items2 = document.querySelectorAll(".scroll-color2");
-    imageList = BuildColorList();
+    root = document.querySelector(":root");
+    BuildColorList();
 
-    for (let i = 0; i < items1.length; i++) {
-        ChangeColor1(items1[i]);
-
-        window.addEventListener("scroll", () => {
-            ChangeColor1(items1[i]);
-        }); 
-        window.addEventListener("resize", () => {
-            ChangeColor1(items1[i]);
-        });
-    }
-/*
-    for (let i = 0; i < items2.length; i++) {
-        ChangeColor2(items2[i]);
-
-        window.addEventListener("scroll", () => {
-            ChangeColor2(items2[i]);
-        }); 
-        window.addEventListener("resize", () => {
-            ChangeColor2(items2[i]);
-        });
-    }*/
+    ChangeColor();
+    window.addEventListener("scroll", () => {
+        ChangeColor();
+    });
+    window.addEventListener("resize", () => {
+        ChangeColor();
+    });
 });
 
 /********** FUNCTIONS **********/
@@ -49,38 +39,44 @@ function BuildColorList() {
             imageRect = images[i].getBoundingClientRect(),
             scrollY = Math.round(imageRect.top - bodyRect.top) - 120,
             color = images[i].dataset.color;
-        list.push( {posY: scrollY, color: color} );
+            complementar = images[i].dataset.complementar;
+        list.push( {posY: scrollY, color: color, complementar: complementar} );
     }
-    return list;
+    list.push( {posY: Infinity, color: "#ffffff", complementar: "#000000"} );
+    imageList =  list;
 }
 
-function ChangeColor1(item) {
-    let newColorList = imageList.copyWithin().reverse();
-    let thisSection, index;
-    for (let i = 0; i < newColorList.length; i++) {
-        if (window.scrollY >= newColorList[i].posY) {
-            thisSection = newColorList[i];
-            index = i;
+function ChangeColor() {
+    let index;
+    for (let i = 0; i < imageList.length; i++) {
+        if (window.scrollY <= imageList[i].posY) {
+            index = Mathf.Clamp(i-1, 0, imageList.length);
             break;
         }
     }
-    let nextSection = imageList[Mathf.Clamp(index-1, 0, imageList.length-1)];
-        startLerpPos = nextSection.posY - 500,
-        finishLerpPos = thisSection.posY;
-        deltaPos = finishLerpPos - startLerpPos;
-        currendPos = window.scrollY - startLerpPos;
-    if (window.scrollY >= startLerpPos) {
-        let fact = currendPos / deltaPos;
-        let backgroundColor = Color.ColorLerp(new Color(thisSection.color), new Color(nextSection.color), fact);
-        item.style.backgroundColor = backgroundColor;
-    }
-    else {
-        item.style.backgroundColor = imageList[index].color;
-    }
-}
-/*
-function ChangeColor2(item) {
 
-}*/
+    let thisSection = imageList[index],
+        nextSection = imageList[index+1],
+        startLerpPos = nextSection.posY - lerpFact,
+        finishLerpPos = nextSection.posY;
+
+    if (window.scrollY >= startLerpPos) {
+        let fact = (window.scrollY - startLerpPos) / (finishLerpPos - startLerpPos);
+        UpdateColorVars(
+            Color.ColorLerp(new Color(thisSection.color), new Color(nextSection.color), fact),
+            Color.ColorLerp(new Color(thisSection.complementar), new Color(nextSection.complementar), fact));
+    }
+    else UpdateColorVars(imageList[index].color, imageList[index].complementar);
+}
+
+function UpdateColorVars(color, complementar) {
+    let light = Color.ColorLerp(new Color(color), new Color("#fff"), colorFact),
+        dark = Color.ColorLerp(new Color(color), new Color("#000"), colorFact);
+
+    root.style.setProperty("--scroll-main", color);
+    root.style.setProperty("--scroll-light", light);
+    root.style.setProperty("--scroll-dark", dark);
+    root.style.setProperty("--scroll-complementar", complementar);
+}
 
 }

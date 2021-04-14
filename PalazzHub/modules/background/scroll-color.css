@@ -1,3 +1,56 @@
+:root {
+    --scroll-main: #9c9c9c;
+    --scroll-light: #ffffff;
+    --scroll-dark: #666666;
+    --scroll-complementar: #000;
+}
+
+/******************* Scrollbar *******************/
+::-webkit-scrollbar {
+    border: solid 3px #0003;
+    width: 14px;
+    border-radius: 5px;
+    background-color: var(--scroll-dark);
+}
+  
+::-webkit-scrollbar-thumb {
+    border: solid 3px #0003;
+    border-radius: 5px;
+    background-color: var(--scroll-main);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-light);
+}
+
+::-webkit-scrollbar-button {
+    border: solid 3px #0003;
+    background-color: var(--scroll-main);
+}
+::-webkit-scrollbar-button:hover {
+    border: solid 3px #0003;
+    background-color: var(--scroll-light);
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+/******************* ColorItems *******************/
+.scroll-main {
+    background-color: var(--scroll-main);
+}
+.scroll-light {
+    background-color: var(--scroll-light);
+}
+.scroll-dark {
+    background-color: var(--scroll-dark);
+}
+
 /******************* Background Image *******************/
 .fixed-image {
     height: 80vh;
@@ -59,3 +112,5 @@
 @media screen and (max-width: 899px) {
     .fixed-image__div__text {font-size: 3em; margin-top: 0;}
 }
+
+
