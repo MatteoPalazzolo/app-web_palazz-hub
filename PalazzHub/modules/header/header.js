@@ -10,5 +10,4 @@ function ShowMenu() {
         menu.classList.remove("is-open");
         isOpen = false;
     }
-    console.log(menu.classList);
 }

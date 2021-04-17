@@ -9,21 +9,13 @@
     border: solid 5px var(--scroll-dark);*/
 }
 
-.projects .flex-list {
-    flex: 30%;
-
+.projects > .flex {
     overflow-y: scroll;
-
     background-color: var(--scroll-light);
+    scrollbar-width: thin;
 }
-
-.projects .flex-descr {
-    flex: 70%;
-    
-    overflow-y: scroll;
-
-    background-color: var(--scroll-light);
-}
+.projects > .list {flex: 30%;}
+.projects > .descr {flex: 70%;}
 
 .projects-title {
     margin: 10px 0;
@@ -34,7 +26,6 @@
     text-decoration: underline 4px;
     font-size: 2.5rem;
 }
-
 
 .projects-item {
     margin: 10px 20px;
@@ -48,8 +39,8 @@
 .projects-item .image {
     height: 300px;
     background: var(--image);
-    background-size: cover;    
-    background-position-y: -190px;
+    background-size: cover;
+    background-origin: content-box;
 }
 
 .projects-item p {

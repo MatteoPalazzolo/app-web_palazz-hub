@@ -16,12 +16,16 @@
     <link rel="stylesheet" type="text/css" href="modules/background/scroll-color.css">
 
     <!-- GENERAL -->
-    <link rel="stylesheet" type="text/css" href="modules/style-main.css"> <!-- main-style -->
-    <link rel="stylesheet" type="text/css" href="style-index.css"> <!-- page-style -->
+    <link rel="stylesheet" type="text/css" href="modules/style-main.css">
+    <link rel="stylesheet" type="text/css" href="style-index.css">
 
     <!-- HEADER -->
     <link rel="stylesheet" type="text/css" href="modules/header/style-header.css">
     <script src="modules/header/header.js"></script>
+
+    <!-- SCROLL-BAR -->
+    <link rel="stylesheet" href="modules/scroll-bar/scroll-bar.css">
+    <script src="modules/scroll-bar/scroll-bar.js"></script>
 
     <!-- SKLL-BAR -->
     <link rel="stylesheet" href="modules/skill-bar/style-skillbar.css">
@@ -61,10 +65,11 @@
             <li class="header__menu__item"><a href="#image5">Sites</a></li>
             <li class="header__menu__item contact"><a href="#image6">Contacts</a></li>
         </ul>
+        <div class="scroll-bar" data-content="scrolllllbar"></div>
     </header>
     
     <!-- IMAGE 1 -->
-    <div id="image1" class="fixed-image background-color" data-color="#2D3F73" data-complementar="#FAE34B"
+    <div id="image1" class="fixed-image background-color" data-color="#2D3F73" data-complementar="#FAE34B" data-hover-text="#000"
     style='--bg-img: url("../../images/background/bg_1.jpg"); --path: polygon(0 0, 100% 0, 100% 91%, 0 100%);'>
         <div class="fixed-image__div">
             <h1 class="fixed-image__div__text">Welcome in PalazzHub</h1>
@@ -92,7 +97,7 @@
     </section>
     
     <!-- IMAGE 2 -->
-    <div id="image2" class="fixed-image background-color" data-color="#F588E2" data-complementar="#A2F54F"
+    <div id="image2" class="fixed-image background-color" data-color="#F588E2" data-complementar="#A2F54F" data-hover-text="#000"
     style='--bg-img: url("../../images/background/bg_2.jpg"); --path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);'></div>
 
     <!-- SKILLS -->
@@ -349,7 +354,7 @@
     </section>
     
     <!-- IMAGE 3 -->
-    <div id="image3" class="fixed-image background-color" data-color="#C23E3E" data-complementar="#2EF442"
+    <div id="image3" class="fixed-image background-color" data-color="#C23E3E" data-complementar="#2EF442" data-hover-text="#000"
     style='--bg-img: url("../../images/background/bg_3.jpg"); --path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);'></div>
     
     <div class="separator1"></div>
@@ -376,12 +381,12 @@
     <div class="separator1"></div>
 
     <!-- IMAGE 4 -->
-    <div id="image4" class="fixed-image background-color" data-color="#E0B73D" data-complementar="#4059F5"
+    <div id="image4" class="fixed-image background-color" data-color="#E0B73D" data-complementar="#4059F5" data-hover-text="#fff"
     style='--bg-img: url("../../images/background/bg_4.jpg"); --path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);'></div>
 
     <section class="projects">
 
-        <div class="flex-list">
+        <div class="flex list">
             <h2 class="projects-title">THREE-JS</h2>
 
             <div class="projects-item" data-info="my first serious project" data-description="i made this project with the supervision of Domenico AcciùBellini">
@@ -408,19 +413,19 @@
 
         </div>
 
-        <div class="flex-descr">
+        <div class="flex descr">
 
         </div>
     </section>
 
     <!-- IMAGE 5 -->
-    <div id="image5" class="fixed-image background-color" data-color="#A8E63D" data-complementar="#B749F5"
+    <div id="image5" class="fixed-image background-color" data-color="#A8E63D" data-complementar="#B749F5" data-hover-text="#fff"
     style='--bg-img: url("../../images/background/bg_5.jpg"); --path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);'></div>
     
     <div class="separator2"></div>
 
     <!-- IMAGE 6 -->
-    <div id="image6" class="fixed-image background-color" data-color="#FFFFFF" data-complementar="#3BBCF5"
+    <div id="image6" class="fixed-image background-color" data-color="#FFFFFF" data-complementar="#3BBCF5" data-hover-text="#fff"
     style='--bg-img: url("../../images/background/bg_6.1.jpg"); --path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);'></div>
 
     <!-- FOOTER -->
